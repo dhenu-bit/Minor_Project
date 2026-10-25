@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: white;
+}
+
+
+/* SAME FULL BACKGROUND */
+
+.auth-background {
+    position: fixed;
+    inset: 0;
+
+    background-image: url("../images/ev-home-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+
+/* OVERLAY */
+
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,10,15,0.55);
+
+    z-index: -1;
+}
+
+
+/* HEADER */
+
+.auth-header {
+    height: 70px;
+
+    padding: 0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: rgba(0,15,20,0.75);
+
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.brand {
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #55f5a8;
+}
+
+
+/* AUTH PAGE */
+
+.auth-page {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+
+/* CARD */
+
+.auth-card {
+    width: 430px;
+
+    padding: 38px;
+
+    background: rgba(255,255,255,0.94);
+
+    color: #17372a;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.auth-card h1 {
+    font-size: 32px;
+
+    margin: 12px 0 8px;
+}
+
+.auth-card > p {
+    color: #68766f;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+.auth-card .tag {
+    color: #16a36a;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* FORM */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+form label {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+    margin-top: 13px;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d5e1db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+form input:focus {
+    border-color: #16a36a;
+
+    box-shadow: 0 0 0 3px rgba(22,163,106,0.1);
+}
+
+
+/* REMEMBER */
+
+.remember {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 18px 0;
+}
+
+.remember label {
+    margin: 0;
+
+    font-weight: normal;
+
+    display: flex;
+
+    gap: 6px;
+}
+
+.remember a {
+    color: #16a36a;
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+
+/* BUTTON */
+
+form button {
+    border: none;
+
+    background: #16a36a;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0d8050;
+}
+
+
+/* BOTTOM TEXT */
+
+.bottom-text {
+    text-align: center;
+
+    margin-top: 22px;
+
+    font-size: 13px;
+}
+
+.bottom-text a {
+    color: #16a36a;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav {
+        display: none;
+    }
+
+    .auth-card {
+        width: 100%;
+
+        max-width: 430px;
+
+        padding: 28px;
+    }
+}
